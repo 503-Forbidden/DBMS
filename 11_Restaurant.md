@@ -60,12 +60,10 @@ db.REST1.insertMany([
 ```
 
 ```bash
-# Q1
 db.REST1.find().pretty()
 ```
 
 ```bash
-# Q2
 db.REST1.find(
  {},
  {
@@ -79,7 +77,6 @@ db.REST1.find(
 ```
 
 ```bash
-# Q3
 db.REST1.find(
  { score: { $gt: 80, $lt: 100 } },
  { name: 1, score: 1, _id: 0 }
@@ -87,7 +84,6 @@ db.REST1.find(
 ```
 
 ```bash
-# Q4
 db.REST1.updateOne(
  { restaurant_id: 3001 },
  { $set: { score: 90 } }
@@ -95,7 +91,6 @@ db.REST1.updateOne(
 ```
 
 ```bash
-# Q5
 db.REST1.updateMany(
  { cuisine_type: "Indian" },
  { $set: { cuisine_type: "Indian_Zatka" } }
@@ -103,14 +98,12 @@ db.REST1.updateMany(
 ```
 
 ```bash
-# Q6
 db.REST1.deleteOne(
  { restaurant_id: 3003 }
 )
 ```
 
 ```bash
-# Q7
 db.REST1.deleteMany(
  { score: { $lt: 85 } }
 )
